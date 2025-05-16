@@ -23,7 +23,7 @@ const automobili = [    // objects
 console.log(automobili)
 
 
-const autoBenzina = [] //oggetto vuoto
+/*const autoBenzina = [] //oggetto vuoto
 const autoDiesel = [] //oggetto vuoto
 const autoEco = []  //oggetto vuoto
 
@@ -48,7 +48,16 @@ if (auto.alimentazione === 'Benzina') {
 console.log('Auto a Benzina:', autoBenzina);   //Elenco auto a Benzina
 console.log('Auto a Diesel:', autoDiesel);     //Elenco auto a Diesel
 console.log('Auto Ecologiche:', autoEco);      //Elenco auto Ecologiche
+*/
 
 
+// OPPURE ABBREVIANDO con .filter
 
 
+const autoBenzina = automobili.filter(auto => auto.alimentazione === 'Benzina');
+const autoDiesel = automobili.filter(auto => auto.alimentazione === 'Diesel');
+const autoEco = automobili.filter (auto => auto.alimentazione !== 'Benzina' && auto.alimentazione !== 'Diesel');
+
+console.log('Auto a Benzina:', autoBenzina);   //Elenco auto a Benzina
+console.log('Auto a Diesel:', autoDiesel);     //Elenco auto a Diesel
+console.log('Auto Ecologiche:', autoEco);      //Elenco auto Ecologiche
